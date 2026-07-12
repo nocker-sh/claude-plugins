@@ -1,0 +1,11 @@
+{
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "env": {
+    "CLAUDE_CODE_TASK_LIST_ID": "claude-plugins"
+  },
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  }
+}
