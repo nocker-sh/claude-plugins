@@ -1,14 +1,14 @@
 {
-  "name": "shigurenimo-claude-plugins",
-  "description": "shigurenimo が提供する Claude Code 用のプラグインマーケットプレース",
+  "name": "nocker-claude-plugins",
+  "description": "https://nocker-inc/claude-plugins",
   "owner": {
-    "name": "shigurenimo",
-    "email": "shigurenimo@gmail.com"
+    "name": "nocker-inc",
+    "email": "hello@nocker.sh"
   },
   "plugins": [
     {
       "name": "product",
-      "description": "開発オーケストレーション用プラグイン。メインセッション用の orchestrator / executor / solo と、サブエージェントの worker、巡回用の loop、dev スキル（設計手法・.docs/ 運用・依頼の振り分け）を提供する。チーム開発は GitHub 運用、個人開発は solo でローカル完結",
+      "description": "?",
       "source": "./plugins/product"
     }
   ]

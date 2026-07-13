@@ -5,15 +5,15 @@
 ## インストール
 
 ```shell
-/plugin marketplace add shigurenimo/claude-plugins
-/plugin install product@shigurenimo-claude-plugins
+/plugin marketplace add nocker-inc/claude-plugins
+/plugin install product@nocker-claude-plugins
 ```
 
 ローカルで試す場合。
 
 ```shell
 /plugin marketplace add ./claude-plugins
-/plugin install product@shigurenimo-claude-plugins
+/plugin install product@nocker-claude-plugins
 ```
 
 ## 使い方
