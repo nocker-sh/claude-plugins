@@ -1,8 +1,8 @@
 {
   "name": "nocker-claude-plugins",
-  "description": "https://nocker-inc/claude-plugins",
+  "description": "https://github.com/nocker-sh/claude-plugins",
   "owner": {
-    "name": "nocker-inc",
+    "name": "nocker-sh",
     "email": "hello@nocker.sh"
   },
   "plugins": [

@@ -5,7 +5,7 @@
 ## インストール
 
 ```shell
-/plugin marketplace add nocker-inc/claude-plugins
+/plugin marketplace add nocker-sh/claude-plugins
 /plugin install product@nocker-claude-plugins
 ```
 
