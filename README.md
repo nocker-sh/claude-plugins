@@ -6,14 +6,14 @@
 
 ```shell
 /plugin marketplace add nocker-sh/claude-plugins
-/plugin install product@nocker-claude-plugins
+/plugin install product@nocker
 ```
 
 ローカルで試す場合。
 
 ```shell
 /plugin marketplace add ./claude-plugins
-/plugin install product@nocker-claude-plugins
+/plugin install product@nocker
 ```
 
 ## 使い方

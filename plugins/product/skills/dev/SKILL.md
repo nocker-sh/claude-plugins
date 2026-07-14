@@ -1,6 +1,6 @@
 ---
 name: dev
-description: 製品開発の全般ルール。設計（プロダクト・UI・ドメイン・コード・API・DB）、.docs/ の製品ドキュメント運用、依頼の振り分け（要望・Issue・PR を signal / backlog / issue に振り分けて実装まで進めるフロー）。機能の設計・実装・ドキュメント作成/更新・作業依頼の受け付けのときに使う。
+description: "?"
 argument-hint: "[drift|links|next|features-sync|自然文|Issue番号]"
 user-invocable: true
 disable-model-invocation: false
