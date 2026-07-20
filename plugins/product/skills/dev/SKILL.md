@@ -14,7 +14,7 @@ disable-model-invocation: false
 
 `/product:dev {入力}` は入力の種類で振り分ける。
 
-- `drift` / `links` / `next` / `features-sync` ⇒ [サブコマンド](#サブコマンド)
+- `drift` / `links` / `next` / `features-sync` / `skills` ⇒ [サブコマンド](#サブコマンド)
 - 自然文（要望・アイデア・作業依頼、例:「ログイン機能を追加して」）⇒ [request.md](references/request.md) を Read し、signal / backlog / issue に分類して記録・実装へ進む
 - 数字・`#N`・GitHub URL ⇒ [request.md](references/request.md) の「Workflow: 既存 Issue の続き」（Issue 取得から PR まで）
 - `signals/{slug}` のパス ⇒ [request.md](references/request.md) の既存記録の更新・昇格
@@ -285,7 +285,10 @@ Beck's Implementation Patterns ⇒ TS:
 
 `/product:dev {sub}` でドキュメント運用のタスクを呼び分ける。各サブコマンドは `commands/{sub}.md` に詳細を書く。
 
+人間の入力だけでなく、fable / sonnet が作業中に該当すると判断したら指示を待たずに自分で呼び出してよい。ただし next は 300+ agent 規模の重い処理になるため、実行前にオーナーの確認を取る。
+
 - [next](commands/next.md): コードベース全体を多レンズで探索し、未捕捉タスクを `tasks.md` に追記する。Workflow ファンアウトで網羅性を担保する。重い処理（300+ agent 規模）。
 - [drift](commands/drift.md): 仕様書／README と実装の乖離を検出する。「実装済」記述と実コードの突合、テーブル数・画面数・ロール権限の食い違い。
 - [features-sync](commands/features-sync.md): routes と features を突合し、ドキュメントを実装に同期する。
 - [links](commands/links.md): `[[wikilink]]` を解決して未定義リンク・孤児ページ・循環参照を検出する。
+- [skills](commands/skills.md): 技術スタックを見て役に立ちそうな Skill パッケージ（react-doctor、shadcn/ui、cloudflare/skills 等）を判定し、`vpx skills` で自動追加する。

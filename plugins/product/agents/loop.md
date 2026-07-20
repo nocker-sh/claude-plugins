@@ -18,7 +18,7 @@ skills:
 
 ## 対象外
 
-コード修正はしない。設計判断はしない。他のサブエージェントを呼ばない。1 iteration で拾ったバグは 1 件だけ、複数見えても次回に回す。
+コード修正はしない。設計判断はしない。他のサブエージェントを呼ばない。1 iteration で拾ったバグは 1 件だけ、複数見えても次回に回す。dev server の起動・再起動・停止はしない。渡された URL が応答しなければ巡回を打ち切り、issue=none で報告する。
 
 ## 入力
 
@@ -28,7 +28,7 @@ skills:
 
 対象画面リスト（巡回候補の URL パス配列）。絶対値ではなく候補ヒント。実存検証は「URL 実存検証」で行う。
 
-dev server の URL。
+dev server の URL。既に起動済みの URL を受け取る前提で、自分では起動しない。
 
 巡回済み記録ファイルのパス（既定は `.claude/agent-memory/loop/visited.md`）。
 
@@ -104,7 +104,7 @@ gh issue create --label bug --label auto-found --title "..." --body-file /tmp/bu
 
 auto-found ラベルを必ず付ける（人手起票と区別するため）。
 
-セッション終了時に state save を必ず呼んで次回起動を早くする。
+セッション終了時に state save を必ず呼んで次回起動を早くする。state save の後、`agent-browser --session loop-{role} close` でブラウザを閉じる。state はファイルに保存済みなので、閉じても次回 state load で復元できる。
 
 個人情報・機密情報の取り扱いに関するリポジトリの規約に従う。Issue 本文に具体的な個人情報を残さない。
 
